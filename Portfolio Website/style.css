@@ -1,0 +1,237 @@
+body {
+  font-family: 'Roboto', serif;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box{
+  min-height: 200px;
+}
+.header {
+  min-height: 200px;
+  color: #2d3c49;
+
+}
+
+.content {
+}
+
+.featured {
+}
+
+.side_bar {
+  width: 25%;
+  order: -1;
+}
+
+.wrapper {
+  width: 75%;
+}
+/* SIDE BAR STUFF START */
+.square {
+  width: 75px;
+  height: 75px;
+  margin-left: auto;
+  margin-right: 15%;
+  margin-top: 20%;
+}
+
+.square.cyan {
+  background-color: #02b3e4;
+  margin-top: 150px;
+}
+.square.dark {
+  background-color: #2d3c49;
+}
+.square.gray {
+  background-color: #7d97ad;
+}
+
+#squareText {
+  font-size: 22px;
+  position: relative;
+  top: 80px;
+  margin:auto;
+}
+/* SIDE BAR STUFF END*/
+/* HEADER STUFF HERE */
+.udacityLogo {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  top: 15px;
+}
+
+hr {
+    border: none;
+    height: 5px;
+    color: #333; /* old IE */
+    background-color: #333; /* Modern Browsers */
+    position: relative;
+    bottom: 150px;
+}
+
+#HeaderBig{
+  font-size: 48px;
+  margin-left: 28%;
+  margin-top: 5%;
+  white-space: nowrap;
+  position: relative;
+  bottom: 100px;
+}
+
+#HeaderSmall {
+  font-size: 21px;
+  margin-left: 60%;
+  white-space: nowrap;
+  position: relative;
+  bottom: 140px;
+}
+/* HEADER STUFF END */
+/* CONTENT STUFF START */
+.programmingPic {
+  width: 100%;
+  margin-top: -60px;
+}
+/* CONTENT STUFF END */
+/* FEATURED STUFF START */
+#featuredWork {
+  font-size: 48px;
+  color: #7d97ad;
+}
+
+.feature.wrap{
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.icon.ethereum {
+  margin-left: auto;
+}
+.icon.xbtc {
+  margin-left: auto;
+}
+
+.icon.eth_pic, .icon.btc_pic, .icon.xbtc_pic {
+  width: 125px;
+}
+.icon.eth_pic {
+  margin-left: 10%;
+}
+.icon.xbtc_pic {
+  margin-left: -10%;
+}
+
+#iconText {
+  margin:auto;
+  font-size: 32px;
+  color: #2d3c49;
+}
+
+/* FEATURED STUFF END */
+
+/* BREAKPOINTS & RESIZING */
+@media screen and (max-width: 550px) {
+  #squareText {
+    font-size: 14px;
+  }
+  #HeaderBig {
+    font-size: 21px;
+    bottom: 35px;
+    margin-left: 40%;
+  }
+  #HeaderSmall {
+    font-size: 12px;
+    bottom: 50px;
+    margin-left: 60%;
+  }
+  hr {
+      bottom: 60px;
+  }
+  .udacityLogo {
+    width: 45px;
+    height: 45px;
+    margin-top: 15px;
+    margin-bottom: -5px;
+  }
+  #featuredWork {
+    font-size: 32px;
+  }
+  .square {
+    width: 50px;
+    height: 50px;
+  }
+  #squareText {
+    top: 52px;
+  }
+  .icon.eth_pic, .icon.btc_pic, .icon.xbtc_pic {
+    width: 60px;
+  }
+  .icon.eth_pic {
+    margin-left: 20%;
+  }
+  .icon.xbtc_pic {
+    margin-left: 1%;
+  }
+  #iconText {
+    font-size: 20px;
+  }
+
+}
+
+@media screen and (min-width: 551px) and (max-width: 780px) {
+  #squareText {
+    font-size: 18px;
+  }
+  #HeaderBig {
+    font-size: 30px;
+    bottom: 50px;
+    margin-left: 38%;
+  }
+  #HeaderSmall {
+    font-size: 15px;
+    bottom: 75px;
+    margin-left: 60%;
+  }
+  hr {
+      bottom: 80px;
+  }
+  .udacityLogo {
+    width: 55px;
+    height: 55px;
+    margin-top: 15px;
+    margin-bottom: -10px;
+  }
+
+  #featuredWork {
+    font-size: 38px;
+  }
+  .square {
+    width: 65px;
+    height: 65px;
+  }
+  #squareText {
+    top: 70px;
+  }
+  .icon.eth_pic, .icon.btc_pic, .icon.xbtc_pic{
+    width: 90px;
+  }
+  .icon.eth_pic {
+    margin-left: 15%;
+  }
+  #iconText {
+    font-size: 26px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .container {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
