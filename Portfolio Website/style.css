@@ -112,6 +112,7 @@ hr {
 .icon.ethereum {
   margin-left: auto;
 }
+
 .icon.xbtc {
   margin-left: auto;
 }
@@ -119,9 +120,11 @@ hr {
 .icon.eth_pic, .icon.btc_pic, .icon.xbtc_pic {
   width: 125px;
 }
+
 .icon.eth_pic {
   margin-left: 10%;
 }
+
 .icon.xbtc_pic {
   margin-left: -10%;
 }
@@ -169,7 +172,7 @@ hr {
     top: 52px;
   }
   .icon.eth_pic, .icon.btc_pic, .icon.xbtc_pic {
-    width: 60px;
+    width: 50px;
   }
   .icon.eth_pic {
     margin-left: 20%;
@@ -178,12 +181,12 @@ hr {
     margin-left: 1%;
   }
   #iconText {
-    font-size: 20px;
+    font-size: 16px;
   }
 
 }
 
-@media screen and (min-width: 551px) and (max-width: 780px) {
+@media screen and (min-width: 551px) and (max-width: 767px) {
   #squareText {
     font-size: 18px;
   }
@@ -226,6 +229,7 @@ hr {
   #iconText {
     font-size: 26px;
   }
+
 }
 
 @media screen and (min-width: 960px) {
