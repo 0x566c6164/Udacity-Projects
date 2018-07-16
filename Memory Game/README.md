@@ -12,6 +12,6 @@ Above 36 moves = 1 star, poor score.<br/>
 Have fun.
 
 ## Sources & Dependencies
-The imagery, grid and the background was created by Udacity.
-Bootstrap icons https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css
-Google fonts https://fonts.googleapis.com/css?family=Coda
+The imagery, grid and the background was created by Udacity. <br/>
+Bootstrap icons https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css <br/>
+Google fonts https://fonts.googleapis.com/css?family=Coda 
