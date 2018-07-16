@@ -1,5 +1,5 @@
 # Memory Game Project
-A memory game made for Udacity project.
+A memory game made for the Udacity project submission.
 
 ## Instructions
 The game itself is a 4x4 grid with cards, the goal is to flip a pair of cards each time and if they match keep them turned up.<br/>
@@ -11,5 +11,7 @@ Above 36 moves = 1 star, poor score.<br/>
 
 Have fun.
 
-## Sources
+## Sources & Dependencies
 The imagery, grid and the background was created by Udacity.
+Bootstrap icons https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css
+Google fonts https://fonts.googleapis.com/css?family=Coda
