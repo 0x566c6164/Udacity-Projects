@@ -17,7 +17,7 @@ function shuffleDeck() {
 shuffleDeck();
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
+    let currentIndex = array.length, temporaryValue, randomIndex;
 
     while (currentIndex !== 0) {
         randomIndex = Math.floor(Math.random() * currentIndex);
@@ -47,7 +47,7 @@ for(let i = 0; i < cards.length; i++) {
         addToggleCard(clickTarget);
 
         // Advances move and checks if need to deduct the star rating
-        advanceMove();
+
         checkScore();
       }
 
@@ -56,14 +56,17 @@ for(let i = 0; i < cards.length; i++) {
         match(openCards[0], openCards[1])
         pairsMatched++;
         isGameWon();
+        advanceMove();
       } else if (openCards.length == 2) {
         setTimeout(() => {
+          advanceMove();
           toggleCard(openCards[0]);
           toggleCard(openCards[1]);
           openCards = [];
         }, 1000);
 
       }
+
     }
   });
 }
