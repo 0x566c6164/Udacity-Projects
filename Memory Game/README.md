@@ -15,3 +15,6 @@ Have fun.
 The imagery, grid and the background was created by Udacity. <br/>
 Bootstrap icons https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css <br/>
 Google fonts https://fonts.googleapis.com/css?family=Coda 
+
+
+![Alt text](img/screenshot.png?raw=true "Game Screenshot")
