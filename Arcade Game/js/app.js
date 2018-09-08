@@ -1,3 +1,4 @@
+'use strict';
 /*
 * GLOBALS
 */
@@ -67,8 +68,8 @@ class Player {
         $('#games')[0].innerHTML = `Games played: ${gamesPlayed} | Games won: ${gamesWon}`
         // Resets game settings...
         gameStarted = false;
-        player = new Player();
-        player.x = 0;
+        this.x = 0;
+        this.y = 999;
         allEnemies = [];
         selectorPos = 0;
       }
@@ -86,8 +87,8 @@ class Player {
 
     // Win condition
     if(this.y < 0) {
-      player.x = 200;
-      player.y = 383;
+      this.x = 200;
+      this.y = 383;
       gamesPlayed++;
       gamesWon++;
       $('#games')[0].innerHTML = `Games played: ${gamesPlayed} | Games won: ${gamesWon}`
@@ -108,26 +109,25 @@ class Player {
 
 
   handleInput(key) {
-    if(!player.isMoving) {
-      console.log('Incoming key: ' + key);
+    if(!this.isMoving) {
       if (key == 'left' && this.x > 0) {
-        animateMovement(key, -this.speed, 50); // Block width 101
-        player.isMoving = true;
+        animateMovement(key, -this.speed, 50, this); // Block width 101
+        this.isMoving = true;
         if(selectorPos > 0) {
           selectorPos -= 100;
         }
       } else if (key == 'right' && this.x < 400) {
-        animateMovement(key, this.speed, 50);
-        player.isMoving = true;
+        animateMovement(key, this.speed, 50, this);
+        this.isMoving = true;
         if(selectorPos < 400) {
           selectorPos += 100;
         }
-      } else if (key == 'up' && this.y > 0) {
-        animateMovement(key, -this.speed * 0.83, 50); // Block height 83
-        player.isMoving = true;
-      } else if (key == 'down' && this.y < 332) {
-        animateMovement(key, this.speed * 0.83, 50);
-        player.isMoving = true;
+      } else if (key == 'up' && this.y > 0 && gameStarted) {
+        animateMovement(key, -this.speed * 0.83, 50, this); // Block height 83
+        this.isMoving = true;
+      } else if (key == 'down' && this.y < 332 && gameStarted) {
+        animateMovement(key, this.speed * 0.83, 50, this);
+        this.isMoving = true;
       } else if (key == 'enter') {
         charSelector(selectorPos, true);
       }
@@ -140,19 +140,19 @@ class Player {
 //////    MOVEMENT ANIMATION    //////
 /////////////////////////////////////
 
-async function animateMovement (key, axis, steps) {
+async function animateMovement (key, axis, steps, obj) {
   if (key == 'left' || key == 'right') {
     for(var i = 0; i < steps; i++) {
       await wait(5);
-      player.x += axis;
+      obj.x += axis;
     }
-    player.isMoving = false;
+    obj.isMoving = false;
   } else if (key == 'up' || key == 'down') {
     for(var i = 0; i < steps; i++) {
       await wait(5);
-      player.y += axis;
+      obj.y += axis;
     }
-    player.isMoving = false;
+    obj.isMoving = false;
   }
 }
 
@@ -218,9 +218,6 @@ function charSelector(selectorPos, selected) {
 //////////////////////////////////
 
 var player = new Player();
-player.x = 200;
-player.y = 999;
-
 
 function startGame(incomingSprite) {
 
