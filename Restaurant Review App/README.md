@@ -1,10 +1,10 @@
 # Mobile Web Specialist Certification Course
 
 ## Restaurant Reviews App - what to expect?
-*API's & Maps* </br>
-*Responsive Design* </br>
-*Accessibility & Semantics* </br>
-*ServiceWorkers caching assets* </br>
+**API's & Maps** </br>
+**Responsive Design** </br>
+**Accessibility & Semantics** </br>
+**ServiceWorkers caching assets** </br>
 
 ## How to run?
 Inside `js/dbhelper.js` configure your servers address and port with this function </br>
